@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const { connectToDatabase } = require('./database'); // Adjust the path based on your project structure
+
 // Set static files directory
 app.use(express.static('public'));
 
@@ -10,6 +12,9 @@ app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
+
+// Connect to the database
+connectToDatabase();
 
 // Define a route
 app.get('/', (req, res) => {
