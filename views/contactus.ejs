@@ -1,13 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/public/styles.css">
+
+  <title>Contact Us</title>
+
 </head>
 <body>
-    <main>
+  <!-- Navigation Bar starts --> 
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light px-2">
         
-    </main>    
+      <a class="navbar-brand p-md-3 fs-4" href="#">Furr Friend</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+      <div class="collapse navbar-collapse justify-content-end px-5" id="navbarNav">
+        <ul class="navbar-nav gap-lg-5">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_Us">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contactus">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="px-lg-3">
+        <a href="login.php" class="btn btn-primary rounded-4">Login</a>
+        <a href="register.php" class="btn btn-primary rounded-4">Register</a>
+
+      </div>
+    </nav>
+  </header> 
+  <!-- Navbar ends -->
+
+<!-- Main Content Start -->
+    <main>
+    <!-- Search bar -->
+    <div class="container mt-4 d-flex justify-content-center align-content-center">
+      <div class="col-md-6">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Title -->
+    <section class="p-5 mt-3 d-flex">
+      <div style="height: 400px; color: #000;" class="container d-flex flex-column align-items-center justify-content-center">
+        <h1>About Us</h1>
+        <h6 class="text-center">Discover our passion for pets, fostering connections, care, and joy in every furry companion's journey.</h6>
+      </div>
+    </section>
+  
+    <!-- Mission Section -->
+    <section class="p-2 d-flex">
+      <div style="color: #000;" class="container py-4 d-flex flex-column flex-sm-column flex-md-row flex-lg-row gap-3">
+        <div class="col-md-5 col-lg-4 px-2 d-flex flex-column gap-3">
+          <h1>Our Mission</h1>
+        </div>
+        <div class="col-md-7 col-lg-8 p-2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ... Cupiditate amet rerum impedit, animi adipisci est quos nulla quibusdam iure, maiores corrupti. Ad.</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Vision Section -->
+    <section style="backdrop-filter: 10px;" class="p-2 d-flex">
+      <div style="color: #000;" class="container py-4 d-flex flex-column flex-sm-column flex-md-row flex-lg-row gap-3">
+        <div class="col-md-5 col-lg-4 px-2 d-flex flex-column gap-3">
+          <h1>Our Vision</h1>
+        </div>
+        <div class="col-md-7 col-lg-8 p-2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ... Cupiditate amet rerum impedit, animi adipisci est quos nulla quibusdam iure, maiores corrupti. Ad.</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Values Section -->
+    <section class="p-2 d-flex">
+      <div class="text-secondary container py-4 d-flex flex-column flex-sm-column flex-md-row flex-lg-row gap-3">
+        <div class="col-md-5 col-lg-4 px-2 d-flex flex-column gap-3">
+          <h1>Our Values</h1>
+        </div>
+        <div class="col-md-7 col-lg-8 p-2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ... Cupiditate amet rerum impedit, animi adipisci est quos nulla quibusdam iure, maiores corrupti. Ad.</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Acknowledgment and Feedback Section -->
+    <section class="p-2 d-flex">
+      <div style="color: #000;" class="container py-4">
+        <h1>Recent Successful Adoptions</h1>
+        <div class="overflow-auto" style="max-height: 300px;">
+          <!-- Feedback Cards -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Pet Name</h5>
+              <p class="card-text">Thank you for helping us find a loving home for our furry friend! The adoption process was smooth, and we appreciate your dedication.</p>
+            </div>
+          </div>
+          <!-- Add more feedback cards as needed -->
+        </div>
+      </div>
+    </section>
+  
+  </main>
+  
+  
+<!-- Main Content End -->
+<!-- Footer -->
+<footer class="bg-dark text-white py-3 d-flex align-content-center justify-content-center">
+  <div class="container m-3">
+      <div class="row">
+          <div class="col-md-4">
+              <h5>Contact Us</h5>
+              <p>Email: info@myawesomewebsite.com</p>
+              <p>Phone: +1 123 456 7890</p>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <h5 class="text-center mb-3">Follow Us</h5>
+            <div class="d-flex justify-content-center">
+                <div class="col-5 d-grid gap-3">
+                    <a href="#" class="btn btn-outline-light btn-sm">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-sm">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-sm">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+          <div class="col-md-4">
+              <h5>About Us</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a quidem reiciendis ipsa nesciunt modi, 
+                rem consequuntur praesentium porro, asperiores fuga eligendi delectus aspernatur odit dolores molestiae saepe blanditiis 
+                amet.</p>
+          </div>
+      </div>
+      <div class="text-center">
+        <p class="text-light">&copy; 2022 Pet Adoption Center. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
+<!-- Footer Ends -->
+    <script src="/jquery/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
