@@ -1,21 +1,27 @@
-const { MongoClient } = require('mongodb');
+const mysql = require('mysql2/promise');
 
-// Connection URI
-const uri = 'YOUR_CONNECTION_STRING'; // Replace with your actual MongoDB connection string
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: '@Rmtaruc100102',
+  database: 'mydatabase',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+});
 
-// Create a new MongoClient
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Connect to the database
-const connectToDatabase = async () => {
+async function connectToDatabase() {
   try {
-    await client.connect();
-    console.log('Connected to the database');
-  } catch (error) {
-    console.error('Error connecting to the database:', error);
-    throw error;
-  }
-};
+    // Get a connection from the pool
+    const connection = await pool.getConnection();
 
-// Export the client and the connectToDatabase function
-module.exports = { client, connectToDatabase };
+    console.log('Connected to MySQL database');
+
+    // Release the connection
+    connection.release();
+  } catch (error) {
+    console.error('Error connecting to MySQL:', error);
+  }
+}
+
+module.exports = { pool, connectToDatabase };

@@ -1,0 +1,185 @@
+ <!-- Pets Card Section -->
+    
+    <section class="mb-5 c1">
+        <!-- Pet Card starts -->
+  
+        <div class="container scrollable-row">
+            <div class="row">
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/cat/profile/Balinese.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Fluffy</h3>
+                    <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/dog/profile/Golden_retriver.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Buddy</h3>
+                    <p class="card-text">Age: 3 years<br>Breed: Golden Retriever<br>Gender: Male</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/dog/profile/Alaskan Malamute.webp" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Mae</h3>
+                    <p class="card-text">Age: 1 year<br>Breed: Alaskan Malamute<br>Gender: Female</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/dog/profile/Belgian Shepherd.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Marlon</h3>
+                    <p class="card-text">Age: 1 year<br>Breed: Belgian Shepherd<br>Gender: Male</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/cat/profile/Chausie.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Fluffy</h3>
+                    <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/cat/profile/Bombay.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Buddy</h3>
+                    <p class="card-text">Age: 3 years<br>Breed: Bombay<br>Gender: Male</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/dog/profile/Chihuahua.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Thumper</h3>
+                    <p class="card-text">Age: 1 year<br>Breed: Holland Lop<br>Gender: Female</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4 col-lg-3">
+                <div class="card mb-4">
+                  <img src="images/cat/profile/Egyptian Mau.jpg" class="card-img-top" alt="dog">
+                  <div class="card-body">
+                    <h3 class="card-title">Mike</h3>
+                    <p class="card-text">Age: 1 year<br>Breed: Egyptian Mau<br>Gender: Male</p>
+                    <a href="#" class="btn btn-primary">Adopt Me</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            
+          </div>
+      </div>
+      
+        <!-- Pet Card ends -->
+    </section>
+
+    
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Animal Breeds</h2>
+    
+        <div class="row">
+            <!-- Breed Card 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://placekitten.com/300/200" class="card-img-top" alt="Cat Breed">
+                    <div class="card-body">
+                        <h5 class="card-title">Domestic Cat</h5>
+                        <p class="card-text">The domestic cat is a small, typically furry, carnivorous mammal.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Breed Card 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/Golden_Retriever_puppy_standing-300x200.jpg" class="card-img-top" alt="Dog Breed">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Retriever</h5>
+                        <p class="card-text">The Golden Retriever is a large-sized breed of dog known for its friendly demeanor.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light px-2">
+      <a class="navbar-brand p-md-3 fs-4" href="#">Furr Friend</a>
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+      <div class="collapse navbar-collapse justify-content-end px-5" id="navbarNav">
+        <ul class="navbar-nav gap-lg-5">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_Us">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contactus">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="px-lg-3">
+        <a href="login.php" class="btn btn-primary rounded-4">Login</a>
+        <a href="register.php" class="btn btn-primary rounded-4">Register</a>
+
+      </div>
+    </nav>
+
+<!-- <section class="mb-5 mt-5">
+        <div class="col-12">
+            <div class="row d-flex flex-column justify-content-center align-content-center">
+                <div class="w-100 d-flex justify-content-center align-content-center ">
+                    <img class="w-100 rounded-2" src="images/pexels-lumn-406014.jpg" alt="Image of a dog with a heart" height="500rem" />
+                </div>
+                <div class="col-12 text-center position-absolute top-50 start-0">
+                    <h1 class="text-dark display-one">Adopt your furry friend today!</h1>
+                    <p class="lead text-secondary">We are here to help you find the perfect pet for your family.</p>           
+                </div>
+              </div>
+            </div>
+        </div>
+    </section> -->

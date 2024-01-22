@@ -10,50 +10,266 @@
   
   <title>Pet Adaption Center</title>
 <style>
-  .c1 .card img {
-    height: 40%;
+  .scrollable-row {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
   .c1 .card {
-    height: 80%;
+    width: 15em;
   }
+  
+  .c1 .card img {
+    width: 15em; 
+    height: 10em;
+  }
+
 </style>
 
 </head>
 <body>
   <!-- Navigation Bar starts --> 
   <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light px-2">
-      <a class="navbar-brand p-md-3 fs-4" href="#">Furr Friend</a>
 
+    <nav
+      class="navbar navbar-expand-sm navbar-light bg-light"
+    >
+      <div class="container">
+        <a class="navbar-brand col-4" href="#">Furr Friend</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-8 justify-content-end " id="collapsibleNavId">
+          <ul class="navbar-nav gap-lg-3 text-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about_Us">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contactus">Contact</a>
+            </li>
+            <!-- LogIn and SignUp Button -->
+            <div class="nav-item px-lg-3 gap-2 d-flex text justify-content-center">
+              
+              <!-- Login Modal trigger button -->
+              <button
+                type="button"
+                class="btn btn-primary rounded-4"
+                data-bs-toggle="modal"
+                data-bs-target="#LogIn_modalId"
+              >
+              Log In
+              </button>
+              
+              <!-- Login Modal Body --> 
+              <div
+                class="modal fade"
+                id="LogIn_modalId"
+                tabindex="-1"
+                 
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                  role="document"
+                >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="Login_modalTitleId">
+                        Log In
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body ">
+                      <h3 class="m-3">Furr Friends</h3>
+                      <!-- Form Inputs -->
+                      <!-- input email --> 
+                      <div class="mx-md-5 px-md-5">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Email_formId1"
+                            id="Email_formId1"
+                            placeholder=""
+                          />
+                          <label for="Email_formId1">Email Address</label>
+                        </div>
+                        <!-- LogIn Password -->
+                        <div class="form-floating mb-3">
+                          
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="pass_formId1"
+                            id="pass_formId1"
+                            placeholder=""
+                          />
+                          <label for="pass_formId1">Password</label>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column">
+                        <a class="text-decoration-none" href="#">Forgot Password?</a>
+                        <a class="text-decoration-none" href="#">Do you not have an account?</a>
+                      </div> 
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary" id="btn_Login">Log In</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Register Modal trigger button -->
+              <button
+                type="button"
+                class="btn btn-primary rounded-4"
+                data-bs-toggle="modal"
+                data-bs-target="#Reg_modalId"
+              >
+                Register
+              </button>
+              
+              <!--Register Modal Body -->
+              <div
+                class="modal fade"
+                id="Reg_modalId"
+                tabindex="-1"
+                 
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                  role="document"
+                >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalTitleId">
+                        Register
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <h3 class="m-3">Furr Friends</h3>
+                      <!-- Form Inputs -->
+                      <!-- Name -->
+                      <div class="mx-md-5 px-md-5">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Name_formId1"
+                            id="Name_formId1"
+                            placeholder=""
+                          />
+                          <label for="Name_formId1">Your Name</label>
+                        </div>
+                        <!-- input email --> 
+                        <div class="form-floating mb-3">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="Email_formId1"
+                            id="Email_formId1"
+                            placeholder=""
+                          />
+                          <label for="Email_formId1">Email Address</label>
+                        </div>
+                        <!-- Register Password -->
+                        <div class="form-floating mb-3">
+                          
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="pass_formId1"
+                            id="pass_formId1"
+                            placeholder=""
+                          />
+                          <label for="pass_formId1">Password</label>
+                        </div>
+                        <!-- Confirm Password -->
+                        <div class="form-floating mb-3">
+                          
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="Comfirmpass_formId1"
+                            id="Comfirmpass_formId1"
+                            placeholder=""
+                          />
+                          <label for="Comfirmpass_formId1">Confirm Password</label>
+                        </div>
+                      </div>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-     
-      <div class="collapse navbar-collapse justify-content-end px-5" id="navbarNav">
-        <ul class="navbar-nav gap-lg-5">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about_Us">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contactus">Contact</a>
-          </li>
-        </ul>
-      </div>
+                      <div class="d-flex justify-content-center">
+                        
+                        <div class="col-md-5 ">
+                          <div class="form-check">
+                            <input class="form-check-input bg-secondary" type="checkbox" value="" id="" />
+                            <label class="form-check-label" for=""> Do you agree on Terms and Conditions</label>
+                          </div>
+                        </div>  
 
-      <div class="px-lg-3">
-        <a href="login.php" class="btn btn-primary rounded-4">Login</a>
-        <a href="register.php" class="btn btn-primary rounded-4">Register</a>
-
+                      </div> 
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">Register</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+            </div>
+             
+          </ul>
+        </div>
       </div>
     </nav>
+
+  
+
   </header> 
   <!-- Navbar ends -->
 
@@ -64,241 +280,255 @@
     <div class="col-md-6">
       <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
     </div>  
   </div>
   
-    <section class="mb-5 mt-5">
-        <div class="col-lg-12">
-            <div class="row d-flex flex-column justify-content-center align-content-center w-100">
-                <div class="w-100 d-flex justify-content-center align-content-center ">
-                    <img class="w-100 rounded-2" src="images/pexels-lumn-406014.jpg" alt="Image of a dog with a heart" height="500rem" />
-                </div>
-                <div class="col-sm-12 text-center position-absolute top-50">
-                    <h1 class="text-dark display-one">Adopt your furry friend today!</h1>
-                    <p class="lead text-secondary">We are here to help you find the perfect pet for your family.</p>           
-                </div>
-              </div>
-            </div>
+  <!-- Landing Page -->
+  <section class="mb-5 mt-4" style="background-image: url('images/pexels-christian-domingues-731022.jpg'); background-repeat: no-repeat; background-size: cover;">
+      <div class="jumbotron jumbotron-fluid p-5" style="height: 30rem;">
+        <div class="container text-center">
+          <h1 class="display-3">Adopt your furry friends</h1>
+          <p class="lead">We are here to help you find the perfect pet for your family.</p>
+          <hr class="my-2">
+          <p>More info</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Explore</a>
+          </p>
         </div>
-    </section>
-
-    <!-- Section bar -->
-    
-    <section class="mb-5 c1">
-        <!-- Pet Card starts -->
-        <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-lg-3">
-                <div class="card mb-4">
-                  <img src="images/cat/profile/Balinese.jpg" class="card-img-top" alt="dog">
-                  <div class="card-body">
-                    <h3 class="card-title">Fluffy</h3>
-                    <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
-                    <a href="#" class="btn btn-primary">Adopt Me</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 col-lg-3">
-                <div class="card mb-4">
-                  <img src="images/dog/profile/Golden_retriver.jpg" class="card-img-top" alt="dog">
-                  <div class="card-body">
-                    <h3 class="card-title">Buddy</h3>
-                    <p class="card-text">Age: 3 years<br>Breed: Golden Retriever<br>Gender: Male</p>
-                    <a href="#" class="btn btn-primary">Adopt Me</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 col-lg-3">
-                <div class="card mb-4">
-                  <img src="images/dog/profile/Alaskan Malamute.webp" class="card-img-top" alt="dog">
-                  <div class="card-body">
-                    <h3 class="card-title">Mae</h3>
-                    <p class="card-text">Age: 1 year<br>Breed: Alaskan Malamute<br>Gender: Female</p>
-                    <a href="#" class="btn btn-primary">Adopt Me</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 col-lg-3">
-                <div class="card mb-4">
-                  <img src="images/dog/profile/Belgian Shepherd.jpg" class="card-img-top" alt="dog">
-                  <div class="card-body">
-                    <h3 class="card-title">Marlon</h3>
-                    <p class="card-text">Age: 1 year<br>Breed: Belgian Shepherd<br>Gender: Male</p>
-                    <a href="#" class="btn btn-primary">Adopt Me</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-lg-3">
-              <div class="card mb-4">
-                <img src="images/cat/profile/Chausie.jpg" class="card-img-top" alt="dog">
-                <div class="card-body">
-                  <h3 class="card-title">Fluffy</h3>
-                  <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
-                  <a href="#" class="btn btn-primary">Adopt Me</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3">
-              <div class="card mb-4">
-                <img src="images/cat/profile/Bombay.jpg" class="card-img-top" alt="dog">
-                <div class="card-body">
-                  <h3 class="card-title">Buddy</h3>
-                  <p class="card-text">Age: 3 years<br>Breed: Bombay<br>Gender: Male</p>
-                  <a href="#" class="btn btn-primary">Adopt Me</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3">
-              <div class="card mb-4">
-                <img src="images/dog/profile/Chihuahua.jpg" class="card-img-top" alt="dog">
-                <div class="card-body">
-                  <h3 class="card-title">Thumper</h3>
-                  <p class="card-text">Age: 1 year<br>Breed: Holland Lop<br>Gender: Female</p>
-                  <a href="#" class="btn btn-primary">Adopt Me</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3">
-              <div class="card mb-4">
-                <img src="images/cat/profile/Egyptian Mau.jpg" class="card-img-top" alt="dog">
-                <div class="card-body">
-                  <h3 class="card-title">Mike</h3>
-                  <p class="card-text">Age: 1 year<br>Breed: Egyptian Mau<br>Gender: Male</p>
-                  <a href="#" class="btn btn-primary">Adopt Me</a>
-                </div>
-              </div>
-            </div>
-          </div>
       </div>
-      
-        <!-- Pet Card ends -->
-    </section>
+  </section>
+ 
+  <!-- Text Part -->
+  <div class="m-3 card bg-light">
+    <div class="card-body text-center">
+      <blockquote class="bl fs-2ockquote">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, molestiae ducimus distinctio, pariatur dolores culpa, doloremque perspiciatis dolorem incidunt qui eos exercitationem at iusto adipisci alias quos natus placeat. Esse?</p>
+        <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+ 
+  <h3 class="p-3 bg-secondary text-light"
+    >Categories <span
+      class="badge bg-primary"
+      >New</span
+    ></h3
+  >
+  <!-- Pet Card Section -->   
+  <section class="mt-3 mb-3">
 
-    <section>
-      
-      <div class="" style="background: url('images/download.jpg') center center/cover no-repeat;">
-        <div class="container p-3">
-        <div class="row">
-          <div class="col-md-12 text-dark">
-            <h2>Adoption Process</h2>
-            <p>The adoption process is simple and straightforward. Here's what you can expect:</p>
-      
-            <div class="accordion" id="adoptionProcessAccordion">
-              <!-- Step 1: Application -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Step 1: Application
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#adoptionProcessAccordion">
-                  <div class="accordion-body">
-                    <!-- Content for Step 1 -->
-                    Submit your adoption application online. We'll review it promptly and contact you.
-                  </div>
-                </div>
-              </div>
-      
-              <!-- Step 2: Assessment -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Step 2: Assessment
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#adoptionProcessAccordion">
-                  <div class="accordion-body">
-                    <!-- Content for Step 2 -->
-                    Our team will assess your application and conduct a virtual or in-person meeting with you.
-                  </div>
-                </div>
-              </div>
-      
-              <!-- Step 3: Meet the Pet -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Step 3: Meet the Pet
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#adoptionProcessAccordion">
-                  <div class="accordion-body">
-                    <!-- Content for Step 3 -->
-                    Schedule a visit to meet the pet you're interested in. Spend time getting to know each other.
-                  </div>
-                </div>
-              </div>
-      
-              <!-- Step 4: Finalize Adoption -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Step 4: Finalize Adoption
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#adoptionProcessAccordion">
-                  <div class="accordion-body">
-                    <!-- Content for Step 4 -->
-                    Complete the adoption paperwork and finalize the process. Welcome your new family member!
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <p class="mt-3">
-              <a class="btn btn-lg btn-primary" href="#" role="button">Start Your Adoption Journey</a>
-            </p>
+    <!-- Pet Categories -->
+    <!-- Cat Cards -->
+    
+    <h1 class="fw-normal m-4">Cat Pets :</h1>
+    
+    <div class="container gap-lg-3 gap-xxl-2 gap-3 d-flex scrollable-row c1">
+ 
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Balinese.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Fluffy</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
           </div>
         </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Bombay.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Buddy</h3>
+            <p class="card-text">Age: 3 years<br>Breed: Bombay<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div> 
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Egyptian Mau.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Mike</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Egyptian Mau<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
         </div>
       </div>
       
-      
-
-      <div class="container mt-5">
-        <h2 class="text-center mb-4">Animal Breeds</h2>
-    
-        <div class="row">
-            <!-- Breed Card 1 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <img src="https://placekitten.com/300/200" class="card-img-top" alt="Cat Breed">
-                    <div class="card-body">
-                        <h5 class="card-title">Domestic Cat</h5>
-                        <p class="card-text">The domestic cat is a small, typically furry, carnivorous mammal.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Breed Card 2 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <img src="images/Golden_Retriever_puppy_standing-300x200.jpg" class="card-img-top" alt="Dog Breed">
-                    <div class="card-body">
-                        <h5 class="card-title">Golden Retriever</h5>
-                        <p class="card-text">The Golden Retriever is a large-sized breed of dog known for its friendly demeanor.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Chausie.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Buru</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Abyssinian.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Fuss</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Abyssinian<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    </section>
+    <!-- Pet Categories -->
+    <!-- Dog Cards -->
+    <h1 class="fw-normal m-4">Dog Pets :</h1>
+
+    <div class="container gap-lg-3 gap-xxl-2 gap-3 d-flex scrollable-row c1">
+ 
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="/images/dog/profile/Canaan Dog.webp" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Obito</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Canaan<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Chihuahua.jpg" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Thumper</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Holland Lop<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Golden_retriver.jpg" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Buddy</h3>
+            <p class="card-text">Age: 3 years<br>Breed: Golden Retriever<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Alaskan Malamute.webp" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Mae</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Alaskan Malamute<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Belgian Shepherd.jpg" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Marlon</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Belgian Shepherd<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+   
+  <!-- Adaption Process -->
+  <section> 
+    <div class="" style="background: url('images/download.jpg') center center/cover no-repeat;">
+      <div class="container p-3">
+      <div class="row">
+        <div class="col-md-12 text-dark">
+          <h2>Adoption Process</h2>
+          <p>The adoption process is simple and straightforward. Here's what you can expect:</p>
+    
+          <div class="accordion" id="adoptionProcessAccordion">
+            <!-- Step 1: Application -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Step 1: Application
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 1 -->
+                  Submit your adoption application online. We'll review it promptly and contact you.
+                </div>
+              </div>
+            </div>
+    
+            <!-- Step 2: Assessment -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Step 2: Assessment
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 2 -->
+                  Our team will assess your application and conduct a virtual or in-person meeting with you.
+                </div>
+              </div>
+            </div>
+    
+            <!-- Step 3: Meet the Pet -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Step 3: Meet the Pet
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 3 -->
+                  Schedule a visit to meet the pet you're interested in. Spend time getting to know each other.
+                </div>
+              </div>
+            </div>
+    
+            <!-- Step 4: Finalize Adoption -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Step 4: Finalize Adoption
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 4 -->
+                  Complete the adoption paperwork and finalize the process. Welcome your new family member!
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <p class="mt-3 text-end">
+            <a class="btn btn-md btn-primary" href="#" role="button">Start Your Adoption Journey</a>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    
+
+  </section>
 
 </main>
 <!-- Main Content End -->
@@ -337,6 +567,7 @@
                 amet.</p>
           </div>
       </div>
+      <hr class="w-100">
       <div class="text-center">
         <p class="text-light">&copy; 2022 Pet Adoption Center. All rights reserved.</p>
       </div>
